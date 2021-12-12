@@ -19,9 +19,11 @@
 </template>
 
 <script setup>
-// import Timeago from './TimeAgo.vue'
-import posts from '../metadata.json'
-import { useRouter } from 'vitepress'
+import { useRouter, useData } from 'vitepress'
 const router = useRouter()
+import { computed } from 'vue'
+
+const { theme } = useData()
+const posts = computed(() => theme.value.posts)
 const { go } = router
 </script>

@@ -1,0 +1,21 @@
+{
+  "name": "vitepress-theme-vitenote",
+  "version": "1.0.0",
+  "description": "simple vitepress theme",
+  "main": "theme/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outlovecn/vitepress-theme-vitenote.git"
+  },
+  "keywords": [
+    "vitepress",
+    "theme",
+    "vitenote"
+  ],
+  "author": "Chaos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outlovecn/vitepress-theme-vitenote/issues"
+  },
+  "homepage": "https://github.com/outlovecn/vitepress-theme-vitenote#readme"
+}

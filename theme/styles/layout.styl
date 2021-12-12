@@ -1,0 +1,107 @@
+*,
+::before,
+::after 
+  box-sizing border-box
+  padding 0
+  margin 0
+
+html 
+  width 100%
+
+a
+  text-decoration none
+  color var(--color-link)
+
+body 
+  /* font */
+  font-family var(--font-family) !important
+  font-size var(--font-size)
+  line-height 1.7
+  color var(--color-text)
+  background-color var(--color-background)
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  -webkit-text-size-adjust none
+  /* size */
+  position relative
+  margin 0 auto
+  padding 0
+  /* width 100% */
+  /* min-width 320px */
+  max-width 750px
+  min-height 100vh
+
+.layout
+  &-404
+    padding 8em 0
+    text-align center
+
+.header 
+  padding 50px 10px
+  text-align center
+  .site-title 
+    font-size calc(var(--font-size) + 2px)
+    letter-spacing 5px
+    /* text-transform uppercase */
+    /* color #555 */
+
+.navbar 
+  padding 10px 10px 0
+  &-item 
+    padding 0 .5em
+
+
+.view
+  position relative
+  padding 0 20px
+
+.list-view
+  .list
+    list-style none !important
+    max-width 750px
+    margin 0 auto
+    &-empty
+      height 100px
+      text-align center
+    &-item
+      position relative
+      padding-bottom 1em
+  .item
+    &-title
+      display inline-block
+      font-size calc(var(--font-size) + 2px)
+      color var(--color-text)
+      padding 1em 0
+      &:hover
+        color var(--color-link)
+    &-date
+      font-size calc(var(--font-size) - 2px)
+      color var(--color-line)
+      border-top 1px solid var(--color-line)
+      padding .5em 0
+    &-excerpt
+      padding-bottom 2em
+
+.post
+  &-head
+    position relative
+  &-title
+    font-weight 400
+    font-size calc(var(--font-size) * 1.5)
+    padding-bottom 1em
+  &-date
+    position absolute
+    right 0
+    top 0
+    font-size calc(var(--font-size) - 2px)
+    font-weight 400
+    /* line-height 2 */
+    color var(--color-line)
+
+.footer
+  padding-bottom 15px
+  text-align center
+  a
+    display inline-block
+    padding 0 1em
+    margin-top 1em

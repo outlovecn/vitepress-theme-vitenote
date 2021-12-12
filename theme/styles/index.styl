@@ -1,0 +1,50 @@
+@import './reset.css';
+@import './vars.css';
+// @import './prism-tomorrow.css';
+@import './layout'
+// @import './md'
+@import './github'
+
+// --font-size: 14px;
+// --font-family: 'Source Sans Pro', 'Hiragino Sans GB', 'Microsoft YaHei', Arial,
+//   sans-serif;
+// --font-family-mono: 'Ubuntu Mono', 'PT Mono', Consolas, Monaco, Menlo,
+//   monospace;
+
+// --color-background: #fff;
+// --color-code-background: #f7f7f7;
+// --color-text: #2c3e50;
+// --color-line: rgba(60, 60, 67, 0.12);
+// --color-link: #4abf8a;
+
+
+// when smaller than tablet
+@media (min-width: 768px)
+  a[href]:not(.header-anchor)
+    position relative
+    &:hover
+      color var(--color-link)
+    &:after
+      content attr(href)
+      position absolute
+      left 50%
+      top 0
+      visibility hidden
+      pointer-events none
+      transform translate(-50%, -95%)
+      transition all 0.1s ease-in-out
+      overflow visible
+      padding 0 10px
+      background #454f54
+      font-size 0.8em
+      border-radius 5px
+      color #ffffff
+      line-height 2
+      white-space nowrap
+      opacity 0.9
+
+    &:hover:after
+      visibility visible
+      transform translate(-50%, calc(-100% - 5px))
+
+

@@ -1,0 +1,31 @@
+/** Base Styles */
+:root {
+  --font-size: 14px;
+  --font-family: 'Source Sans Pro', 'Hiragino Sans GB', 'Microsoft YaHei', Arial,
+    sans-serif;
+  --font-family-mono: 'Ubuntu Mono', 'PT Mono', Consolas, Monaco, Menlo,
+    monospace;
+
+  --color-background: #fff;
+  --color-code-background: #f7f7f7;
+  --color-text: #2c3e50;
+  --color-line: rgba(60, 60, 67, 0.3);
+  --color-link: #3eaf7c;
+}
+
+/** Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0d1117;
+    --color-code-background: #161b22;
+    --color-text: #c9d1d9;
+    --color-line: #30363d;
+    --color-link: #3eaf7c;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-size: 14px;
+  }
+}

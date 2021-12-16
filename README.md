@@ -1,3 +1,7 @@
+![npm](https://img.shields.io/npm/v/vitepress-theme-vitenote/latest)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/outlovecn/vitepress-theme-vitenote)
+![GitHub](https://img.shields.io/github/license/outlovecn/vitepress-theme-vitenote)
+
 Scaffolding Your Vitepress Project
 
 > [build a basic VitePress documentation site from ground up](https://vitepress.vuejs.org/)

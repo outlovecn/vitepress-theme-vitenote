@@ -1,6 +1,8 @@
 import Layout from './layouts/Layout.vue'
 import NotFound from './layouts/404.vue'
 
+import 'github-markdown-css'
+import 'prismjs/themes/prism.css'
 import './styles/index.styl'
 
 export default {

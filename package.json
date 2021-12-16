@@ -1,6 +1,6 @@
 {
   "name": "vitepress-theme-vitenote",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "simple vitepress theme",
   "main": "theme/index.js",
   "repository": {

@@ -13,8 +13,6 @@
     "vitenote"
   ],
   "dependencies": {
-    "github-markdown-css": "^5.1.0",
-    "prismjs": "^1.25.0",
     "stylus": "^0.55.0",
     "timeago.js": "^4.0.2",
     "vitepress": "^0.20.2"

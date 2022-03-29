@@ -13,14 +13,19 @@
     "vitenote"
   ],
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "rd": "^2.0.1",
     "stylus": "^0.55.0",
     "timeago.js": "^4.0.2",
-    "vitepress": "^0.20.2"
+    "vitepress": "^0.20.8"
   },
   "author": "Chaos",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/outlovecn/vitepress-theme-vitenote/issues"
   },
-  "homepage": "https://github.com/outlovecn/vitepress-theme-vitenote#readme"
+  "homepage": "https://github.com/outlovecn/vitepress-theme-vitenote#readme",
+  "devDependencies": {
+    "feed": "^4.2.2"
+  }
 }

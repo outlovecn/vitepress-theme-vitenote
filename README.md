@@ -40,6 +40,7 @@ export default defineConfig({
   description: 'Just playing around.',
   themeConfig: {
     author: 'Chaos',
+    copyright: true,
     navbar: [
       {
         name: '首页',

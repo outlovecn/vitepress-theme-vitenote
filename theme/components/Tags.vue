@@ -8,17 +8,16 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter, useData } from 'vitepress'
-const router = useRouter()
-import { data } from '../tags.data'
+import { useRouter } from 'vitepress'
+const { go, route } = useRouter()
 import { computed } from 'vue'
+import { data as tagsAndCategories } from '../tags.data'
 
-const route = useRoute()
-const key = computed(() => route.path.split('/')[1])
+// currentRoute.value will be 'tags' or 'categories'
+const currentRoute = computed(() => route.path.split('/')[1])
 
-// const { tags, categories } = data
-const titles = computed(() => data[key.value])
-const { go } = router
-const gotoTags = tag => go(`/${key.value}/${tag}/`)
+// titles is a list of the current route
+const titles = computed(() => tagsAndCategories[currentRoute.value])
+const gotoTags = tag => go(`/${currentRoute.value}/${tag}/`)
 
 </script>

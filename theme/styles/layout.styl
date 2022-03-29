@@ -1,9 +1,6 @@
 @media (max-width: 767px)
-  .list-view
+  div.list-view
     .list
-      &-empty
-        height 100px
-        text-align center
       &-item
         padding 1em !important
         &:hover
@@ -17,6 +14,7 @@
       padding 1em !important
     &-passed
       display block
+      text-align right
 
 
 *,
@@ -53,7 +51,7 @@ body
 
 .layout
   &-404
-    padding 3em 0 8em
+    padding 6em 0 8em
     text-align center
 
 .header
@@ -106,7 +104,7 @@ $tags
           background var(--color-background)
           
     &-empty
-      height 100px
+      padding 6em 0 8em
       text-align center
     &-item
       position relative
@@ -163,6 +161,7 @@ $tags
     @extend $tags
   &-passed
     @extend $tags
+    color var(--color-line)
     background var(--color-background)
   &-date
     position absolute

@@ -31,16 +31,13 @@ function getPost(fullPath) {
 
   const src = fs.readFileSync(fullPath, 'utf-8')
   const { data } = matter(src, { excerpt: true })
-  const { tags } = data
-  const { categories } = getTypePath(fullPath)
+  const { tags = [] } = data
+  const { categories = [] } = getTypePath(fullPath)
 
   const addToCache = (arr, map) => arr.map(i => map.add(i))
 
   addToCache(tags, tagsCache)
   addToCache(categories, categoriesCache)
-
-  // console.log(tagsCache)
-  // console.log(categories)
 
   cache.set(fullPath, {
     timestamp,

@@ -4,7 +4,7 @@
     <div class="view">
       <Tags v-if="isTags" />
       <PostList v-else-if="isPostList" />
-      <Post v-else />
+      <Post v-else :key="route.path" />
     </div>
     <FooterBar />
   </div>
@@ -18,20 +18,11 @@ import PostList from "../components/PostList.vue";
 import Tags from "../components/Tags.vue";
 import Post from "../components/Post.vue";
 import FooterBar from '../components/FooterBar.vue';
-
+const { theme } = useData()
+const navlink = computed(() => theme.value.navbar.map(nav => nav.link))
 const route = useRoute()
-const routepath = computed(() => route.path.replace(/.html$/, '').replace(/index$/, ''))
-console.log(routepath);
-const isTags = computed(() => ['/tags/', '/categories/'].includes(routepath.value))
-const isPostList = computed(() => {
-  switch (routepath.value.split('/')[1]) {
-    case '':
-    case 'tags':
-    case 'categories':
-      return true
-    default:
-      return false
-  }
-})
+const isTags = computed(() => ['/tags/', '/categories/'].includes(route.path))
+const isPostList = computed(() => !route.path.endsWith('.html'))
+console.log(route.path, isTags.value, isPostList.value, navlink);
 
 </script>

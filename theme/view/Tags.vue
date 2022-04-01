@@ -9,10 +9,10 @@
 
 <script setup>
 import { useRouter } from 'vitepress'
-const { go, route } = useRouter()
 import { computed } from 'vue'
 import { data as tagsAndCategories } from '../tags.data'
 
+const { go, route } = useRouter()
 // currentRoute.value will be 'tags' or 'categories'
 const currentRoute = computed(() => route.path.split('/')[1])
 

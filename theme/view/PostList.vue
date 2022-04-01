@@ -28,9 +28,9 @@
 <script setup>
 import { useRouter, useData, useRoute } from 'vitepress'
 import { formatTime } from '../utils/index.js'
-const router = useRouter()
 import { data as posts } from '../posts.data'
 import { computed } from 'vue'
+const router = useRouter()
 
 const { theme, lang } = useData()
 const route = useRoute()

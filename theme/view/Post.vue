@@ -1,7 +1,7 @@
 <template>
   <div class="viewmain">
     <div class="post-head" v-if="isRealPage">
-      <h1 class="post-title">{{ title }}</h1>
+      <h1 class="post-title" :hidden="titlehidden">{{ title }}</h1>
       <span class="post-tags" v-for="(tag, i) in tags" :key="i">{{ tag }}</span>
       <span class="post-passed" v-if="passed"> {{ passed }} </span>
     </div>
@@ -25,5 +25,6 @@ const passed = formatTime(updateTime, lang.value)
 
 const isRealPage = computed(() => { return route.data && route.data.relativePath })
 const title = computed(() => { return page.value.frontmatter.title || page.value.relativePath.split(/\/|.md/).slice(-2)[0] })
+const titlehidden = computed(() => !!page.value.frontmatter.titlehidden)
 const tags = computed(() => { return page.value.frontmatter.tags || page.value.relativePath.split(/\/|.md/).slice(1, -2)})
 </script>

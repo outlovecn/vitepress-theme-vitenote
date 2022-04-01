@@ -1,5 +1,5 @@
 @media (max-width: 767px)
-  div.list-view
+  div.viewmain
     .list
       &-item
         padding 1em !important
@@ -10,8 +10,6 @@
           .item-title
             color var(--color-link)
   .post
-    &-view
-      padding 1em !important
     &-passed
       display block
       text-align right
@@ -83,7 +81,7 @@ $tags
   padding .2em .6em
   margin-left .5em
 
-.list-view
+.viewmain
   .list
     list-style none !important
     max-width 750px
@@ -144,16 +142,12 @@ $tags
     &-excerpt
       font-size calc(var(--font-size) - 2px)
       // line-height 1
-      pre
-        padding .5em 1em
-      p, ol, dl, ul, blockquote, pre
-        margin-bottom .5em
 
 .post
-  &-view
-    padding 1em 2em
   &-head
+  &-main
     position relative
+    padding 1em 2em
   &-title
     font-weight 400
     font-size calc(var(--font-size) * 1.5)
@@ -171,8 +165,6 @@ $tags
     font-weight 400
     /* line-height 2 */
     color var(--color-line)
-  &-main
-    padding-top 1em
 
 .footer
   padding-bottom 15px
